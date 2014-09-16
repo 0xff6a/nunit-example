@@ -20,6 +20,19 @@ namespace Bank
       Assert.AreEqual(100m, source.Balance);
     }
 
+    [Test]
+    [ExpectedException(typeof(InsufficientFundsException))]
+    public void TransferWithInsufficientFunds()
+    {
+      Account source = new Account();
+      source.Deposit(200m);
+
+      Account destination = new Account();
+      destination.Deposit(150m);
+
+      source.TransferFunds(destination, 300m);
+    }
+
     static void Main()
     {
 
