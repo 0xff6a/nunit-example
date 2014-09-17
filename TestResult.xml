@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="bank.exe" total="2" failures="0" not-run="0" date="2014-09-16" time="17:59:04">
-  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 13.3.0.0" platform="Unix" cwd="/Users/jeremyfox/Csharp/nunit-examples" machine-name="The-Fox.local" user="jeremyfox" user-domain="The-Fox.local" />
+<test-results name="bank.exe" total="2" failures="0" not-run="1" date="2014-09-17" time="09:29:49">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 13.3.0.0" platform="Unix" cwd="/Users/jeremyfox/Csharp/nunit-examples" machine-name="the-fox.lan" user="jeremyfox" user-domain="the-fox.lan" />
   <culture-info current-culture="en-GB" current-uiculture="en-GB" />
   <test-suite name="bank.exe" success="True" time="0.021" asserts="0">
     <results>
@@ -9,8 +9,13 @@
         <results>
           <test-suite name="AccountTest" success="True" time="0.013" asserts="0">
             <results>
-              <test-case name="Bank.AccountTest.TransferFunds" executed="True" success="True" time="0.006" asserts="2" />
+              <test-case name="Bank.AccountTest.TransferFunds" executed="True" success="True" time="0.005" asserts="2" />
               <test-case name="Bank.AccountTest.TransferWithInsufficientFunds" executed="True" success="True" time="0.001" asserts="0" />
+              <test-case name="Bank.AccountTest.TransferWithInsufficientFundsAtomicity" executed="False">
+                <reason>
+                  <message><![CDATA[Decide how to implement transaction management]]></message>
+                </reason>
+              </test-case>
             </results>
           </test-suite>
         </results>
